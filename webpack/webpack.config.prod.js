@@ -4,6 +4,10 @@ const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const glob = require('glob-all');
+const CssNanoPlugin = require('cssnano-webpack-plugin');
+const PurifyCSSPlugin = require('purifycss-webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const extractLess = new ExtractTextPlugin({
     filename: "styles/[name].[hash].css",
 });
@@ -13,7 +17,11 @@ module.exports = merge(common, {
     devtool: 'none',
     stats: 'errors-only',
     optimization: {
-        minimize: true
+        minimize: true,
+        minimizer: [
+            new CssNanoPlugin(),
+            new UglifyJsPlugin(),
+        ]
     },
     plugins: [
         new webpack.DefinePlugin({
@@ -23,6 +31,17 @@ module.exports = merge(common, {
         // compiling mode “scope hoisting”
         new webpack.optimize.ModuleConcatenationPlugin(),
         extractLess,
+        new PurifyCSSPlugin({
+            paths: glob.sync([
+                path.join(__dirname, '../_layouts/*.html'),
+                path.join(__dirname, '../_includes/*.html'),
+            ]),
+            purifyOptions: {
+                whitelist: [
+                    '*uk-offcanvas-bar*',
+                ],
+            },
+        }),
     ],
     module: {
         rules: [
