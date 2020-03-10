@@ -1,12 +1,11 @@
 # webpack-uikit
 
 features:
-- uikit v3.0.0
+- uikit v3.3.3
 - less
 - es7, stage-0
-- jquery v3.3.1 (global variable $, import not needed)
-- font awesome v5.7.2 (default = switched off, src/scripts/vendors/index.js)
-- select2 (default = switched off, src/scripts/vendors/index.js)
+- jquery v3.3.1
+- select2
 
 scripts:
 - start - development with dev server

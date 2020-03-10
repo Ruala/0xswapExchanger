@@ -1,9 +1,9 @@
 {
-  "name": "webpack-uikit",
+  "name": "0xswap-exchanger",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:Lutsman/webpack-uikit.git",
-  "author": "Lutsman <333333y@gmail.com>",
+  "repository": "git@github.com:Ruala/0xswapExchanger.git",
+  "author": "Ruala <myruala@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "webpack --config webpack/webpack.config.prod.js  --colors",
@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
-    "@fortawesome/fontawesome-free": "^5.7.2",
     "cssnano-webpack-plugin": "^1.0.1",
     "glob-all": "^3.1.0",
     "jquery": "^3.3.1",
@@ -19,7 +18,7 @@
     "purifycss-webpack": "^0.7.0",
     "select2": "^4.0.6-rc.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "uikit": "^3.0.0-rc.10"
+    "uikit": "^3.3.3"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
