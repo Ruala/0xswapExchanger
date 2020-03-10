@@ -65,9 +65,11 @@
 // New
 //
 
-@button-text-transform:                         uppercase;
+@button-text-transform:                         none;
 
 @button-border-width:                           @global-border-width;
+
+@button-border-radius:                          500px;
 
 @button-default-border:                         @global-border;
 @button-default-hover-border:                   darken(@global-border, 20%);
@@ -86,6 +88,7 @@
     text-transform: @button-text-transform;
     transition: 0.1s ease-in-out;
     transition-property: color, background-color, border-color;
+    border-radius: @button-border-radius;
 }
 
 .hook-button-hover() {}
@@ -229,6 +232,13 @@
 @inverse-button-default-hover-color:           @inverse-global-emphasis-color;
 @inverse-button-default-active-background:     transparent;
 @inverse-button-default-active-color:          @inverse-global-emphasis-color;
+
+@inverse-button-primary-background:            @button-primary-background;
+@inverse-button-primary-color:                 @button-primary-color;
+@inverse-button-primary-hover-background:      @button-primary-hover-background;
+@inverse-button-primary-hover-color:           @button-primary-hover-color;
+@inverse-button-primary-active-background:     @button-primary-active-background;
+@inverse-button-primary-active-color:          @button-primary-active-color;
 
 @inverse-button-text-color:                    @inverse-global-emphasis-color;
 @inverse-button-text-hover-color:              @inverse-global-emphasis-color;

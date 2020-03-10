@@ -5,83 +5,249 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>0xswap.exchange</title>
 </head>
-<body>
+<body class="uk-light uk-background-secondary"> <!--uk-dark-->
 
-<div class="uk-offcanvas-content">
-    <div class="uk-child-width-1-1 uk-height-viewport uk-flex uk-flex-wrap uk-flex-wrap-between">
-        <div>
+<div class="uk-height-viewport uk-flex uk-flex-column uk-flex-between">
+    <div>
 
-            <!--Header-->
-            <header class="uk-navbar-container uk-position-relative">
-                <nav uk-navbar>
-                    <div class="uk-navbar-left">
+        <!--Header-->
+        <header class="uk-navbar-container uk-navbar-transparent uk-position-relative">
+            <nav uk-navbar>
+                <div class="uk-navbar-left">
+                    <!--logo-->
+                    <a class="uk-navbar-item uk-logo" href="/">0xswap.exchange</a>
+                </div>
 
-                        <!--mobile menu toggle-->
-                        <a href="#offcanvas-overlay" class="uk-navbar-toggle uk-hidden@l"
-                           uk-navbar-toggle-icon uk-toggle></a>
+                <div class="uk-navbar-right">
+                    <div class="uk-navbar-item">
+                        <button class="uk-button uk-button-primary">Connect to wallet</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-                        <!--logo-->
-                        <a class="uk-navbar-item uk-logo" href="/">
-                            <img src="images/logo_tourweek.png" alt="">
-                        </a>
+        <!-- Section -->
+        <div class="uk-section">
+            <div class="uk-container">
+                <div class="exchange">
+                    <div class="exchange__item">
+                        <div class="exchange__header">
+                            <div>Input</div>
 
-                        <!--navbar menu-->
-                        <ul class="uk-navbar-nav uk-visible@l">
-                            <li><a href="#"></a></li>
-                            <li>
-                                <a href="#"></a>
+                            <div>Balance: 0.00 ETH</div>
+                        </div>
 
-                                <div class="uk-navbar-dropdown"
-                                     uk-drop="mode: click; boundary: !header; boundary-align: true; pos: bottom-justify;">
-                                    <div class="uk-container">
-                                        <ul class="uk-nav uk-navbar-dropdown-nav uk-column-1-4">
-                                            <li><a href="#"></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                        <div class="exchange__body">
+                            <input class="exchange__input uk-input" type="text" placeholder="0">
 
+                            <select>
+                                <option value="ETH">ETH</option>
+                                <option value="DAI">DAI</option>
+                                <option value="REP">REP</option>
+                                <option value="WETH">WETH</option>
+                                <option value="ZRX">ZRX</option>
+                                <option value="USDC">USDC</option>
+                                <option value="BAT">BAT</option>
+                                <option value="MKR">MKR</option>
+                                <option value="WBTC">WBTC</option>
+                                <option value="SNX">SNX</option>
+                                <option value="SUSD">SUSD</option>
+                                <option value="KNC">KNC</option>
+                                <option value="BNT">BNT</option>
+                                <option value="GNO">GNO</option>
+                                <option value="LINK">LINK</option>
+                                <option value="REN">REN</option>
+                                <option value="GNT">GNT</option>
+                                <option value="OMG">OMG</option>
+                                <option value="ANT">ANT</option>
+                                <option value="SAI">SAI</option>
+                                <option value="CVL">CVL</option>
+                                <option value="DTH">DTH</option>
+                                <option value="FOAM">FOAM</option>
+                                <option value="AST">AST</option>
+                                <option value="AION">AION</option>
+                                <option value="GEN">GEN</option>
+                                <option value="STORJ">STORJ</option>
+                                <option value="MANA">MANA</option>
+                                <option value="ENTRP">ENTRP</option>
+                                <option value="MLN">MLN</option>
+                                <option value="LOOM">LOOM</option>
+                                <option value="CELR">CELR</option>
+                                <option value="RLC">RLC</option>
+                                <option value="ICN">ICN</option>
+                                <option value="DGD">DGD</option>
+                                <option value="ZIL">ZIL</option>
+                                <option value="cBAT">cBAT</option>
+                                <option value="cSAI">cSAI</option>
+                                <option value="cSAI">cSAI</option>
+                                <option value="cETH">cETH</option>
+                                <option value="cREP">cREP</option>
+                                <option value="cUSDC">cUSDC</option>
+                                <option value="cZRX">cZRX</option>
+                                <option value="0xBTC">0xBTC</option>
+                                <option value="SNT">SNT</option>
+                                <option value="SPANK">SPANK</option>
+                                <option value="BOOTY">BOOTY</option>
+                                <option value="BNB">BNB</option>
+                                <option value="ICX">ICX</option>
+                                <option value="NMR">NMR</option>
+                                <option value="GUSD">GUSD</option>
+                                <option value="FUN">FUN</option>
+                                <option value="PAX">PAX</option>
+                                <option value="TUSD">TUSD</option>
+                                <option value="LPT">LPT</option>
+                                <option value="ENJ">ENJ</option>
+                                <option value="POWR">POWR</option>
+                                <option value="REQ">REQ</option>
+                                <option value="DNT">DNT</option>
+                                <option value="MATIC">MATIC</option>
+                                <option value="LRC">LRC</option>
+                                <option value="RDN">RDN</option>
+                                <option value="USDT">USDT</option>
+                            </select>
+
+                        </div>
                     </div>
 
-                    <div class="uk-navbar-center uk-visible@l"></div>
+                    <div class="exchange__swap">
+                        <svg class="exchange__icon" enable-background="new 0 0 64 64" height="512" viewBox="0 0 64 64" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m31.414 15.586-7-7c-.78-.781-2.048-.781-2.828 0l-7 7c-.781.781-.781 2.047 0 2.828.78.781 2.048.781 2.828 0l3.586-3.586v39.172c0 1.104.896 2 2 2s2-.896 2-2v-39.172l3.586 3.586c.39.391.902.586 1.414.586s1.024-.195 1.414-.586c.781-.781.781-2.047 0-2.828z"/><path d="m49.414 45.586c-.781-.781-2.047-.781-2.828 0l-3.586 3.586v-39.172c0-1.104-.896-2-2-2s-2 .896-2 2v39.172l-3.586-3.586c-.781-.781-2.048-.781-2.828 0-.781.781-.781 2.047 0 2.828l7 7c.391.391.902.586 1.414.586s1.023-.195 1.414-.586l7-7c.781-.781.781-2.047 0-2.828z"/></svg>
+                    </div>
+                    
+                    <div class="exchange__item">
+                        <div class="exchange__header">
+                            <div>Output</div>
 
-                    <div class="uk-navbar-right"></div>
-                </nav>
-            </header>
+                            <div>Balance: 0.00 DAI</div>
+                        </div>
 
-            <!-- Section -->
-            <div class="uk-section">
-                <div class="uk-container">
+                        <div class="exchange__body">
+                            <input class="exchange__input uk-input" type="text" placeholder="0">
 
+                            <select>
+                                <option value="ETH">ETH</option>
+                                <option value="DAI" selected>DAI</option>
+                                <option value="REP">REP</option>
+                                <option value="WETH">WETH</option>
+                                <option value="ZRX">ZRX</option>
+                                <option value="USDC">USDC</option>
+                                <option value="BAT">BAT</option>
+                                <option value="MKR">MKR</option>
+                                <option value="WBTC">WBTC</option>
+                                <option value="SNX">SNX</option>
+                                <option value="SUSD">SUSD</option>
+                                <option value="KNC">KNC</option>
+                                <option value="BNT">BNT</option>
+                                <option value="GNO">GNO</option>
+                                <option value="LINK">LINK</option>
+                                <option value="REN">REN</option>
+                                <option value="GNT">GNT</option>
+                                <option value="OMG">OMG</option>
+                                <option value="ANT">ANT</option>
+                                <option value="SAI">SAI</option>
+                                <option value="CVL">CVL</option>
+                                <option value="DTH">DTH</option>
+                                <option value="FOAM">FOAM</option>
+                                <option value="AST">AST</option>
+                                <option value="AION">AION</option>
+                                <option value="GEN">GEN</option>
+                                <option value="STORJ">STORJ</option>
+                                <option value="MANA">MANA</option>
+                                <option value="ENTRP">ENTRP</option>
+                                <option value="MLN">MLN</option>
+                                <option value="LOOM">LOOM</option>
+                                <option value="CELR">CELR</option>
+                                <option value="RLC">RLC</option>
+                                <option value="ICN">ICN</option>
+                                <option value="DGD">DGD</option>
+                                <option value="ZIL">ZIL</option>
+                                <option value="cBAT">cBAT</option>
+                                <option value="cSAI">cSAI</option>
+                                <option value="cSAI">cSAI</option>
+                                <option value="cETH">cETH</option>
+                                <option value="cREP">cREP</option>
+                                <option value="cUSDC">cUSDC</option>
+                                <option value="cZRX">cZRX</option>
+                                <option value="0xBTC">0xBTC</option>
+                                <option value="SNT">SNT</option>
+                                <option value="SPANK">SPANK</option>
+                                <option value="BOOTY">BOOTY</option>
+                                <option value="BNB">BNB</option>
+                                <option value="ICX">ICX</option>
+                                <option value="NMR">NMR</option>
+                                <option value="GUSD">GUSD</option>
+                                <option value="FUN">FUN</option>
+                                <option value="PAX">PAX</option>
+                                <option value="TUSD">TUSD</option>
+                                <option value="LPT">LPT</option>
+                                <option value="ENJ">ENJ</option>
+                                <option value="POWR">POWR</option>
+                                <option value="REQ">REQ</option>
+                                <option value="DNT">DNT</option>
+                                <option value="MATIC">MATIC</option>
+                                <option value="LRC">LRC</option>
+                                <option value="RDN">RDN</option>
+                                <option value="USDT">USDT</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    
+                    <div class="exchange__info">
+                        <div>Exchange Rate</div>
+
+                        <div>1 ETH ≈ 200.14123832405 DAI</div>
+                    </div>
+
+                    <div class="exchange__controls">
+                        <button class="uk-button uk-button-primary">Exchange</button>
+                    </div>
                 </div>
+                
             </div>
-
         </div>
 
-        <!--Footer-->
-        <footer class="uk-section">
-            <div class="uk-container">
-
-            </div>
-        </footer>
     </div>
 
-    <!-- Off-canvas -->
-    <div id="offcanvas-overlay" uk-offcanvas="mode: push; overlay: true">
-        <div class="uk-offcanvas-bar">
-            <button class="uk-offcanvas-close" type="button" uk-close></button>
-
-            <div class="uk-card uk-flex uk-flex-center">
-                <ul class="uk-nav">
-                    <li><a href="#"></a></li>
+    <!--Footer-->
+    <footer class="uk-section uk-section-small">
+        <div class="uk-container">
+            <div class="uk-flex uk-flex-between uk-flex-middle">
+                <ul class="uk-subnav uk-margin-remove-bottom" uk-margin>
+                    <li><a href="#" target="_blank">About</a></li>
+                    <li><a href="#" target="_blank">Docs</a></li>
+                    <li><a href="#" target="_blank">Code</a></li>
                 </ul>
+
+                <button id="theme-switcher" class="theme-switcher uk-button" data-theme="night">
+                    <svg class="theme-switcher__icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                         viewBox="0 0 302.4 302.4" style="enable-background:new 0 0 302.4 302.4;" xml:space="preserve">
+                         <g>
+                                    <path d="M204.8,97.6C191.2,84,172,75.2,151.2,75.2s-40,8.4-53.6,22.4c-13.6,13.6-22.4,32.8-22.4,53.6s8.8,40,22.4,53.6
+                                        c13.6,13.6,32.8,22.4,53.6,22.4s40-8.4,53.6-22.4c13.6-13.6,22.4-32.8,22.4-53.6S218.8,111.2,204.8,97.6z"/>
+                             <path d="M151.2,51.6c5.6,0,10.4-4.8,10.4-10.4V10.4c0-5.6-4.8-10.4-10.4-10.4c-5.6,0-10.4,4.8-10.4,10.4v30.8
+                                        C140.8,46.8,145.6,51.6,151.2,51.6z"/>
+                             <path d="M236.4,80.8l22-22c4-4,4-10.4,0-14.4s-10.4-4-14.4,0l-22,22c-4,4-4,10.4,0,14.4C225.6,84.8,232,84.8,236.4,80.8z"/>
+                             <path d="M292,140.8h-30.8c-5.6,0-10.4,4.8-10.4,10.4c0,5.6,4.8,10.4,10.4,10.4H292c5.6,0,10.4-4.8,10.4-10.4
+                                        C302.4,145.6,297.6,140.8,292,140.8z"/>
+                             <path d="M236,221.6c-4-4-10.4-4-14.4,0s-4,10.4,0,14.4l22,22c4,4,10.4,4,14.4,0s4-10.4,0-14.4L236,221.6z"/>
+                             <path d="M151.2,250.8c-5.6,0-10.4,4.8-10.4,10.4V292c0,5.6,4.8,10.4,10.4,10.4c5.6,0,10.4-4.8,10.4-10.4v-30.8
+                                        C161.6,255.6,156.8,250.8,151.2,250.8z"/>
+                             <path d="M66,221.6l-22,22c-4,4-4,10.4,0,14.4s10.4,4,14.4,0l22-22c4-4,4-10.4,0-14.4C76.8,217.6,70.4,217.6,66,221.6z"/>
+                             <path d="M51.6,151.2c0-5.6-4.8-10.4-10.4-10.4H10.4c-5.6,0-10.4,4.8-10.4,10.4s4.8,10.4,10.4,10.4h30.8
+                                        C46.8,161.6,51.6,156.8,51.6,151.2z"/>
+                             <path d="M66,80.8c4,4,10.4,4,14.4,0s4-10.4,0-14.4l-22-22c-4-4-10.4-4-14.4,0s-4,10.4,0,14.4L66,80.8z"/>
+                                </g>
+                    </svg>
+
+                    <svg class="theme-switcher__icon" height="448pt" viewBox="-12 0 448 448.04455" width="448pt" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m224.023438 448.03125c85.714843.902344 164.011718-48.488281 200.117187-126.230469-22.722656 9.914063-47.332031 14.769531-72.117187 14.230469-97.15625-.109375-175.890626-78.84375-176-176 .972656-65.71875 37.234374-125.832031 94.910156-157.351562-15.554688-1.980469-31.230469-2.867188-46.910156-2.648438-123.714844 0-224.0000005 100.289062-224.0000005 224 0 123.714844 100.2851565 224 224.0000005 224zm0 0"/>
+                    </svg>
+                </button>
             </div>
         </div>
-    </div>
-
+    </footer>
 </div>
 
 </body>

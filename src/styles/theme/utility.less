@@ -26,8 +26,8 @@
 
 @logo-font-size:                                @global-large-font-size;
 @logo-font-family:                              @global-font-family;
-@logo-color:                                    @global-color;
-@logo-hover-color:                              @global-color;
+@logo-color:                                    @global-primary-background;
+@logo-hover-color:                              darken(@logo-color, 5%);
 
 @dragover-box-shadow:                           0 0 20px rgba(100,100,100,0.3);
 
@@ -69,6 +69,10 @@
 
 // Inverse
 // ========================================================================
+
+@inverse-logo-color:                           @logo-color;
+@inverse-logo-hover-color:                     @logo-hover-color;
+
 
 .hook-inverse-dropcap() {}
 

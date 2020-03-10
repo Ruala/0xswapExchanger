@@ -1,0 +1,225 @@
+//scroll bar
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,.1);
+  border-radius: 0
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 0;
+  background: rgba(121, 150, 175, 0.4);
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(121, 150, 175, 0.15);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(121, 150, 175, 0.8);
+}
+
+:focus {
+  outline: none;
+}
+
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+  }
+
+  &[data-theme="night"] {
+    color: @global-inverse-color;
+    background-color: @inverse-global-muted-background;
+    border: 1px solid @inverse-global-border;
+
+    &::before {
+      left: 0;
+      background-color: @global-inverse-color;
+      border-color: @inverse-global-border;
+    }
+
+    svg {
+      fill: @global-inverse-color;
+    }
+  }
+
+  &[data-theme="day"] {
+    background-color: @global-muted-background;
+    border: 1px solid @global-border;
+
+    &::before {
+      left: calc(100% - 30px);
+      background-color: @global-color;
+      border-color: @global-border;
+    }
+
+    svg {
+      fill: @global-color;
+    }
+  }
+
+  &__icon {
+    width: 30px;
+    padding: 5px;
+    border-radius: 50%;
+  }
+}
+
+.exchange {
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  &__item {
+    padding: 10px 20px;
+    background-color: @global-muted-background;
+    border-radius: 15px;
+  }
+
+  &__swap {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 0 15px;
+    background-color: #eee;
+
+    svg {
+      fill: @global-color;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 0 15px;
+    background-color: #eee;
+    font-size: 14px;
+    border-radius: 0 0 15px 15px;
+  }
+
+  &__controls {
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  &__body {
+    display: flex;
+  }
+
+  &__input {
+    flex: 1 1 0;
+    min-width: 1px;
+    max-width: 100%;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__logo {
+    width: 28px;
+    margin-right: 10px;
+  }
+
+  &__icon {
+    width: 24px;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+  }
+
+  .select2 {
+    min-width: 120px;
+    max-width: 100%;
+  }
+
+  .select2-container .select2-selection--single {
+    height: @global-control-height;
+    border-color: @global-border;
+    border-radius: 10px;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: @global-control-height;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: calc(@global-control-height - 2px);
+  }
+}
+
+.select2-dropdown {
+  border-color: @global-border;
+  border-radius: 10px;
+}
+
+.uk-light {
+
+  .exchange {
+
+    &__item {
+      background-color: #333;
+    }
+
+    &__swap, &__info {
+      background-color: @inverse-global-muted-background;
+
+      svg {
+        fill: @inverse-global-color;
+      }
+    }
+
+    .select2-container .select2-selection--single,
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+      color: @inverse-global-color;
+    }
+
+    .select2-container .select2-selection--single {
+      background-color: #444;
+      border-color: #333;
+    }
+  }
+
+  .select2-dropdown {
+    background-color: #444;
+    border-color: #333;
+  }
+
+  .select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: @global-secondary-background;
+  }
+}
