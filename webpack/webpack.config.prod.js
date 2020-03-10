@@ -1,5 +1,5 @@
 'use strict';
-
+const path = require('path');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const webpack = require('webpack');
@@ -33,12 +33,13 @@ module.exports = merge(common, {
         extractLess,
         new PurifyCSSPlugin({
             paths: glob.sync([
-                path.join(__dirname, '../_layouts/*.html'),
-                path.join(__dirname, '../_includes/*.html'),
+                path.join(__dirname, '../src/*.html'),
+                // path.join(__dirname, '../_includes/*.html'),
             ]),
             purifyOptions: {
                 whitelist: [
                     '*uk-offcanvas-bar*',
+                    '*select2*',
                 ],
             },
         }),

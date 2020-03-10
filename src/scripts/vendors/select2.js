@@ -16,7 +16,7 @@ $(()=>{
             if (!state.id) {
                 return state.text;
             }
-            const baseUrl = "/images/logo";
+            const baseUrl = "images/logo";
             const $state = $(
                 '<span class="exchange__name"><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.svg" class="exchange__logo" /> ' + state.text + '</span>'
             );
