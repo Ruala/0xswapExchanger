@@ -97,6 +97,11 @@
   }
 }
 
+.btn-wallet-mob {
+  display: none;
+  width: 20px;
+}
+
 .exchange {
   width: 600px;
   max-width: 100%;
@@ -281,5 +286,20 @@
 
   .select2-container--default .select2-search--dropdown .select2-search__field {
     border-color: @global-primary-background;
+  }
+}
+
+@media (max-width: 460px) {
+
+  .btn-wallet {
+    padding: 10px;
+  }
+
+  .btn-wallet-desktop {
+    display: none;
+  }
+
+  .btn-wallet-mob {
+    display: block;
   }
 }
