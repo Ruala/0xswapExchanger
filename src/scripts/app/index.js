@@ -33,13 +33,36 @@ $(()=>{
         function setFocus(e) {
             const $item = $(e.target).closest('.exchange__item');
 
+            if (!$item) return;
+
             $item.addClass('exchange__item_focused');
         }
 
         function removeFocus(e) {
             const $item = $(e.target).closest('.exchange__item');
 
+            if (!$item) return;
+
             $item.removeClass('exchange__item_focused');
+        }
+    })();
+
+    //enter max balance
+    (() => {
+        const $parent = $('.exchange');
+
+        $parent.on('click', enterMax);
+
+        function enterMax(e) {
+            const $balance = $(e.target).closest('.exchange__balance');
+
+            if (!$balance) return;
+
+            const $item = $balance.closest('.exchange__item');
+            const $input = $item.find('.exchange__input');
+            const sum = parseFloat( $balance.find('.exchange__sum').text() );
+
+            $input.val(sum);
         }
     })();
 });
