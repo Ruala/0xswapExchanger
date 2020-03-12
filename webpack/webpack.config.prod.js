@@ -40,6 +40,7 @@ module.exports = merge(common, {
                 whitelist: [
                     '*uk-offcanvas-bar*',
                     '*select2*',
+                    '*exchange__item*',
                 ],
             },
         }),
