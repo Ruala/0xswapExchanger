@@ -7,7 +7,7 @@ $(()=>{
         const $select = $('select');
 
         $select.select2({
-            minimumResultsForSearch: Infinity,
+            minimumResultsForSearch: 2,
             templateSelection: formatState,
             templateResult: formatState,
         });

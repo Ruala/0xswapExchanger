@@ -22,4 +22,24 @@ $(()=>{
             }
         }
     })();
+
+    //focus highlight
+    (() => {
+        const $parent = $('.exchange');
+
+        $parent.on('focusin', setFocus);
+        $parent.on('focusout', removeFocus);
+
+        function setFocus(e) {
+            const $item = $(e.target).closest('.exchange__item');
+
+            $item.addClass('exchange__item_focused');
+        }
+
+        function removeFocus(e) {
+            const $item = $(e.target).closest('.exchange__item');
+
+            $item.removeClass('exchange__item_focused');
+        }
+    })();
 });
