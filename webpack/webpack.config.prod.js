@@ -38,7 +38,7 @@ module.exports = merge(common, {
             ]),
             purifyOptions: {
                 whitelist: [
-                    '*uk-offcanvas-bar*',
+                    // '*uk-offcanvas-bar*',
                     '*uk-tooltip*',
                     '*uk-transform-origin*',
                     '*uk-animation*',
