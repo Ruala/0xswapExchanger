@@ -1,3 +1,12 @@
+@keyframes loader {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 //scroll bar
 ::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -169,6 +178,23 @@
   &__name {
     display: flex;
     align-items: center;
+  }
+
+  &__rate {
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      width: 0;
+      height: 1px;
+      background-color: @global-primary-background;
+      animation: loader 10s linear infinite;
+    }
   }
 
   .select2 {
