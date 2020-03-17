@@ -42,6 +42,7 @@ module.exports = merge(common, {
                     '*uk-tooltip*',
                     '*uk-transform-origin*',
                     '*uk-animation*',
+                    '*uk-text*',
                     '*select2*',
                     '*exchange__item*',
                 ],
