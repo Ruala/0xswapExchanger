@@ -209,7 +209,7 @@
                 if (!animationSupported) return; //do nothing..
 
                 //get width of a single character (assume mono-spaced font)..
-                $this.html("1");
+                $this.html("0");
                 var characterWidth = $this.width();
                 var characterHeight = $this.height();
                 $this.attr("data-numberAnimate-characterHeight", characterHeight);
