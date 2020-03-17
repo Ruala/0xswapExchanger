@@ -121,6 +121,10 @@
             overflow: 'hidden',
             display: 'inline-block'
         }).attr("data-numberAnimate-pos", position);
+
+        if (position < 1) {
+            holderDiv.addClass('uk-text-muted');
+        }
         
         var innerDiv = $(document.createElement('div')).html(allChars);
         //fix annoying flickering for older webkit browsers..
