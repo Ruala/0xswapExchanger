@@ -97,9 +97,32 @@
   }
 }
 
+.btn-wallet {
+
+  &_connected {
+    padding: 0 10px;
+  }
+}
+
 .btn-wallet-mob {
   display: none;
   padding: 10px 0;
+}
+
+.btn-swap {
+  padding: 0;
+  background: none;
+  color: @global-color;
+  opacity: 0.8;
+  transition: all 0.1s ease-in-out;
+
+  svg {
+    fill: @global-color;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .exchange {
@@ -124,10 +147,6 @@
     padding: 10px;
     margin: 0 15px;
     background-color: #eee;
-
-    svg {
-      fill: @global-color;
-    }
   }
 
   &__info {
@@ -179,10 +198,6 @@
   &__logo {
     width: 28px;
     margin-right: 10px;
-  }
-
-  &__icon {
-    width: 24px;
   }
 
   &__name {
@@ -255,6 +270,14 @@
     color: #fff;
   }
 
+  .btn-swap {
+    color: @inverse-global-color;
+
+    svg {
+      fill: @inverse-global-color;
+    }
+  }
+
   .exchange {
 
     &__item {
@@ -307,7 +330,7 @@
   }
 
   .btn-wallet {
-    padding: 0 10px;
+    padding: 0 20px;
     font-size: 12px;
   }
 
