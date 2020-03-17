@@ -65,4 +65,17 @@ $(()=>{
             $input.val(sum);
         }
     })();
+
+    (() => {
+        console.dir($.fn.numberAnimate);
+        const $target = $('.number-animate');
+        $target.numberAnimate();
+
+        $('.exchange__input').keypress(function(e){
+            if(e.which === 13){
+                e.preventDefault();
+                $target.numberAnimate('set', $(this).val());
+            }
+        });
+    })();
 });
