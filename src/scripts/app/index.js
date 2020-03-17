@@ -66,6 +66,7 @@ $(()=>{
         }
     })();
 
+    //numberAnimate
     (() => {
         console.dir($.fn.numberAnimate);
         const $target = $('.number-animate');
