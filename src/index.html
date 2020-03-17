@@ -208,7 +208,7 @@
                     <div class="exchange__info">
                         <div>Exchange Rate</div>
 
-                        <div class="exchange__rate">1 ETH ≈ <span class="number-animate">200<span class="uk-text-muted">.14123832405</span></span> DAI</div>
+                        <div class="exchange__rate">1 ETH ≈ <span class="number-animate">200.14123832405</span> DAI</div>
                     </div>
 
                     <div class="exchange__status">
@@ -216,8 +216,15 @@
                     </div>
 
                     <div class="exchange__controls">
-                        <button class="uk-button uk-button-primary">Exchange</button>
-                        <button class="uk-button uk-button-primary" disabled>Exchange</button>
+                        <div class="uk-margin-bottom" uk-margin>
+                            <button class="uk-button uk-button-success">Unlock 11 DAI</button>
+                            <button class="uk-button uk-button-danger">Infinity unlock</button>
+                        </div>
+                        <div uk-margin>
+                            <button class="uk-button uk-button-primary">Exchange</button>
+                            <button class="uk-button uk-button-primary" disabled>Exchange</button>
+                            <button class="uk-button uk-button-danger">Lock</button>
+                        </div>
                     </div>
 
                     <div class="uk-alert-success" uk-alert>

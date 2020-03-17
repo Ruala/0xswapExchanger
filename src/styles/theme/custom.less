@@ -39,6 +39,26 @@
   outline: none;
 }
 
+.uk-button-success {
+  color: #fff;
+  background-color: @global-success-background;
+  border: 1px solid transparent;
+
+  &:hover {
+    color: #fff;
+    background-color:  darken(@global-success-background, 5%);
+  }
+}
+
+.uk-text-success,
+.uk-text-warning,
+.uk-text-danger {
+
+  .uk-text-muted {
+    color: inherit !important;
+  }
+}
+
 .theme-switcher {
   display: flex;
   align-items: center;
@@ -320,15 +340,6 @@
     background-color: #ccc;
     color: #666;
     border-color: #bbb;
-  }
-}
-
-.uk-text-success,
-.uk-text-warning,
-.uk-text-danger {
-
-  .uk-text-muted {
-    color: inherit !important;
   }
 }
 
